@@ -15,5 +15,6 @@ type Route struct {
 func Get() []Route{
 	return []Route{
 		{ "/", handlers.HomeHandler{}.Index,"GET"},
+		{ "/contact", handlers.ContactHandler{}.Submit,"POST"},
 	}
 }

@@ -24,7 +24,6 @@ func main() {
 		mux.HandleFunc(route.Destination,
 			route.Handler).Methods(route.Method)
 	}
-	http.Handle("/", mux)
 	http.ListenAndServe("localhost:6060", mux)
 
 }
